@@ -1,0 +1,296 @@
+/*
+# This file is part of RenameIT.
+#
+# Copyright(c) 2015 Giacomo Cerquone
+# cerquone96@hotmail.it
+# http://www.giacomocerquone.it
+#
+# This file may be licensed under the terms of of the
+# GNU General Public License Version 2 (the ``GPL'').
+#
+# Software distributed under the License is distributed
+# on an ``AS IS'' basis, WITHOUT WARRANTY OF ANY KIND, either
+# express or implied. See the GPL for the specific language
+# governing rights and limitations.
+#
+# You should have received a copy of the GPL along with this
+# program. If not, go to http://www.gnu.org/licenses/gpl.html
+# or write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+*/
+
+html,body {
+	margin:0;
+	padding:0;
+	height:100%;
+	-webkit-user-select: none;
+}
+body {
+	background:#292f38;
+	color:#fcfcfd;
+	font-size:100%;
+	text-align:center;
+	font-family: 'Roboto', sans-serif;
+	font-weight:300;
+	height:100%;
+}
+h1 {
+	font-size:4em;
+	font-weight: 300;
+}
+h2 {
+	font-size: 1.5em;
+	font-weight: 300;
+}
+a {
+	text-decoration:none;
+	color:#fff;
+	transition:color .5s;
+	cursor:pointer;
+	}
+a:hover {
+	color:#c1c8d1;
+}
+ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+
+
+table {
+	display:none;
+	width:80%;
+	margin:80px auto 50px auto;
+	text-align:left;
+	border-collapse: collapse;
+}
+thead {
+	background:#47a9a7;
+	font-weight:400;
+	white-space: nowrap;
+}
+tbody td {
+	padding:5px 10px;
+}
+thead td {
+	padding:10px;
+}
+tbody tr:nth-child(even) {
+	background: rgba(0, 0, 0, .1);
+}
+.short {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;    
+	width: 100px;
+	min-width: 0;
+	display:block;
+}
+.button {
+	border-radius:10px;
+	padding:10px 5px;
+	transition:background .4s;
+	box-shadow:inset 0 -2px 0 0 rgba(0,0,0,0.25);
+	cursor:pointer;
+}
+.button:active {
+	box-shadow:0 0 0 0;
+	position:relative;
+	top:2px;
+}
+input[type='checkbox'] {
+	margin:7px 0 0 0;
+}
+input[type='text'] {
+	width:100%;
+}
+input[type='number'] {
+	width:40px;
+}
+#clear_old, #clear_new {
+	transition:color .3s;
+}
+#clear_old:hover, #clear_new:hover {
+	color:rgba(203, 78, 78, 1);
+}
+.ord {
+	display:inline-block;
+	font-size: .8em;
+	font-style: normal;
+}
+.ord-rotate {
+	webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+}
+
+
+#menu {
+	background:#3f4855;
+	width:100%;
+	height:40px;
+	font-weight:400;
+}
+#menu > li{
+	float:left;
+	line-height:2.5em;
+	margin:0 100px 0 0;
+	padding:0 10px;
+	transition:background .5s;
+}
+#menu > li:first-child {
+	margin:0 100px 0 30px;
+}
+#menu li:hover {
+	background:#292f38;
+}
+#submenu {
+	text-align:left;
+	background:#3f4855;
+	position: absolute;
+	z-index: 1;
+	left: -100px;
+	top: 70px;
+	opacity: 0;
+	transition: left 0.4s ease-in-out, opacity 0.6s ease-in-out;
+}
+#submenu li {
+	cursor:pointer;
+	padding:5px 100px 5px 5px;
+	transition:background .4s;
+}
+#submenu li:hover {
+	background:#292f38;
+}
+#menu li:first-child:hover #submenu {
+	left:30px;
+	opacity:1;
+}
+
+/* STYLING TITLEBAR AND FOOTERBAR */
+#titlebar, #footerbar {
+	width:100%;
+	height:30px;
+	background:#19242e;
+	-webkit-app-region: drag
+}
+#footerbar {
+	position:fixed;
+	bottom:0;
+}
+#footerbar span{
+	font-size:.7em;
+	line-height: 30px;
+	font-weight: 300;
+}
+#titlebar span {
+	font-weight: 300;
+	font-size:1em;
+	line-height: 30px;
+}
+
+/* STYLING TOPBAR BUTTONS */
+.topbtn {
+	position:absolute;
+	right:0;
+	top:0;
+	float:right;
+	display:inline-block;
+	margin:7px 7px 0 0;
+	-webkit-app-region: no-drag;
+}
+#min, .max, #close, .unmax {
+	display:inline-block;
+	width:20px;
+	height:16px;
+	background: url("../img/frame_icons.png") no-repeat;
+}
+#min {
+	background-position: 0px 0px;
+}
+.max {
+	background-position: -20px 0px;
+}
+#close {
+	background-position: -40px 0px;
+}
+.unmax {
+	background-position: -120px 0px;
+}
+#min:hover {
+	background-position: -60px 0px;
+}
+.max:hover {
+	background-position: -80px 0px;
+}
+#close:hover {
+	background-position: -100px 0px;
+}
+.unmax:hover {
+	background-position: -140px 0px;
+}
+
+
+
+
+header {
+	width:40%;
+	margin:80px auto 0 auto;
+}
+.submit {
+	font-size:2.5em;
+	color:#fcfcfd;
+	float:right;
+	background: rgba(203, 78, 78, 0.8);
+	width:200px;
+	position:relative;
+	right:calc(50% - 100px);
+	transition: right .5s ease-in-out;
+}
+.submit:hover {
+	background: rgba(203, 78, 78, 0.5);
+}
+.submit-movement {
+	right:0%;
+}
+
+
+
+#drop {
+	margin:80px auto 0 auto;
+	border:5px dashed #dfe2e7;
+	width:250px;
+	height:250px;
+	border-radius:10px;
+	cursor:pointer;
+	position:relative;
+}
+.uploadIcon {
+	width:120px;
+	height:120px;
+	border-radius:100%;
+	box-shadow:0 0 0 1px rgba(223, 226, 231, .7);
+	margin:40px auto 0 auto;
+	transition: box-shadow .2s;
+}
+.uploadIconAnimation {
+	box-shadow:0 0 0 10px rgba(223, 226, 231, .7);
+}
+
+#tool {
+	float:left;
+	margin-top: -20px;
+} 
+.go {
+	font-size:1em;
+	color:#fcfcfd;
+	background:#47a9a7;
+	width:60px;
+	margin-bottom:4px;
+}
+.close {
+	font-size:1em;
+	color:#fcfcfd;
+	background: rgba(203, 78, 78, 0.8);
+	width:60px;

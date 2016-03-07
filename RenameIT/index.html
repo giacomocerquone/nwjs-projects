@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+# This file is part of RenameIT.
+#
+# Copyright(c) 2015 Giacomo Cerquone
+# cerquone96@hotmail.it
+# http://www.giacomocerquone.it
+#
+# This file may be licensed under the terms of of the
+# GNU General Public License Version 2 (the ``GPL'').
+#
+# Software distributed under the License is distributed
+# on an ``AS IS'' basis, WITHOUT WARRANTY OF ANY KIND, either
+# express or implied. See the GPL for the specific language
+# governing rights and limitations.
+#
+# You should have received a copy of the GPL along with this
+# program. If not, go to http://www.gnu.org/licenses/gpl.html
+# or write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+-->
+
+<html>
+  <head>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+
+    <link href='css/font.css' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <div id="titlebar">
+      <span>RenameIT</span>
+      <div class="topbtn">
+        <a href="#" id="min"></a>
+        <a href="#" id="max" class="max"></a>
+        <a href="#" id="close"></a>
+      </div>
+    </div>
+
+  </div>
+  	<ul id="menu">
+  		<li>
+  			<a href="#">Tools</a>
+  			<ul id="submenu">
+		  		<li id="copy"><a title="Insert the 'Old Name' into 'New Name' Column.">Copy</a></li>
+		  		<li id="replace"><a title="Replace entire names or extensions with others.">Replace</a></li>
+          <li id="find-replace"><a title="Find and replace words others.">Find & Replace</a></li>
+          <li id="number"><a title="Append sequential numbers to the end or the beginning of the file name.">Number</a></li>
+          <li id="delete"><a title="Delete a precise number of chars.">Delete</a></li>
+		  	</ul>
+  		</li>
+
+  		<li><a href="#">About</a></li>
+  	</ul>
+
+
+    <header>
+        <div id="tool"></div>
+      	<div class="button submit">renameIT</div>
+    </header>
+
+    <div style="clear:both;"></div>
+
+
+    <div id="drop">
+      <div class="uploadIcon"></div>
+      <h2>Drop here your files.</h2>
+    </div>
+
+  	<table>
+      <thead>
+        <tr>
+          <td style="width:5%;"><input id="master" type="checkbox" checked /></td>
+          <td style="width:10%;"><a id="order"><div class="ord">&Delta;</div> Old Name</a>  <a id="clear_old" title="Clear the list.">-clear</a></td>
+          <td>New Name  <a id="clear_new" title="Clear all the new names.">-clear</a></td>
+        </tr>
+      </thead>
+
+      <tbody>
+      </tbody>
+  	</table>
+
+    <div id="footerbar"><span>&copy;Giacomo Cerquone - 2015</span></div>
+
+
+    <script src="js/script.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+# This file is part of TranslateIT.
+#
+# Copyright(c) 2015 Giacomo Cerquone
+# cerquone96@hotmail.it
+# http://www.giacomocerquone.it
+#
+# This file may be licensed under the terms of of the
+# GNU General Public License Version 2 (the ``GPL'').
+#
+# Software distributed under the License is distributed
+# on an ``AS IS'' basis, WITHOUT WARRANTY OF ANY KIND, either
+# express or implied. See the GPL for the specific language
+# governing rights and limitations.
+#
+# You should have received a copy of the GPL along with this
+# program. If not, go to http://www.gnu.org/licenses/gpl.html
+# or write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+-->
+
+<html>
+<head>
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+
+	<link href='css/font.css' rel='stylesheet' type='text/css'>
+	<link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div id="titlebar">
+		<span>TranslateIT</span>
+		<div class="topbtn">
+			<a href="#" id="min"></a>
+			<a href="#" id="max" class="max"></a>
+			<a href="#" id="close"></a>
+		</div>
+	</div>
+
+    <div id="drop">
+      <div class="uploadIcon"></div>
+      <h2>Drop here your files.</h2>
+      <h6>Only unicode srt.</h6>
+    </div>
+
+	<div id="container">
+
+		<input type="range" value="0" min="0" />
+		<span class="range-value"></span>
+
+		<div id="content">
+			<h3>Minutes</h3>
+			<p id="minutes"></p>
+
+			<select>
+				<option selected disabled>Select a language</option>
+				<option>Albanian</option>
+				<option>Dutch</option>
+				<option>Italian</option>
+				<option>English</option>
+				<option>Finnish</option>
+				<option>French</option>
+				<option>German</option>
+				<option>Greek</option>
+				<option>Norwegian</option>
+				<option>Polish</option>
+				<option>Portuguese</option>
+				<option>Spanish</option>
+				<option>Swedish</option>
+			</select>
+
+			<p id="read"></p>
+
+			<select>
+				<option selected disabled>Select a language</option>
+				<option>Albanian</option>
+				<option>Dutch</option>
+				<option>Italian</option>
+				<option>English</option>
+				<option>Finnish</option>
+				<option>French</option>
+				<option>German</option>
+				<option>Greek</option>
+				<option>Norwegian</option>
+				<option>Polish</option>
+				<option>Portuguese</option>
+				<option>Spanish</option>
+				<option>Swedish</option>
+			</select>
+
+			<p><input class="text" type="text" /></p>
+
+		</div>
+		<div class="button" id="prev">Prev</div>
+		<div class="button" id="next">Next</div>
+		<div class="button" id="save">Save</div>
+
+	</div>
+
+    <div id="footerbar"><span>&copy;Giacomo Cerquone - 2015</span></div>
+
+
+	<script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>

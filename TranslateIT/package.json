@@ -1,0 +1,23 @@
+{
+  "main": "index.html",
+  "name": "TranslateIT",
+  "description": "This little software allows you to translate fastly the language of a subtitle.",
+  "version": "0.5",
+  "keywords": [
+        "Giacomo", 
+        "Cerquone", 
+        "Translate",
+        "Srt"
+    ],
+  "window": {
+    "title": "TranslateIT",
+    "icon": "img/logo.png",
+    "toolbar": false,
+    "frame": false,
+    "width": 1200,
+    "height": 750,
+    "license": "GPLv3", 
+    "homepage": "http://www.giacomocerquone.it", 
+    "position": "center"
+  }
+}

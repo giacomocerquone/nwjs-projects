@@ -1,0 +1,23 @@
+{
+  "main": "index.html",
+  "name": "renameIT",
+  "description": "This little software allows you to rename many files all together.",
+  "version": "0.5",
+  "keywords": [
+        "Giacomo", 
+        "Cerquone", 
+        "Rename",
+        "Files"
+    ],
+  "window": {
+    "title": "renameIT",
+    "icon": "img/logo.png",
+    "toolbar": false,
+    "frame": false,
+    "width": 1200,
+    "height": 700,
+    "license": "GPLv3", 
+    "homepage": "http://www.giacomocerquone.it", 
+    "position": "center"
+  }
+}
